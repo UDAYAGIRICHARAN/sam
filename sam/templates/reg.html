@@ -1,0 +1,90 @@
+<!show the details>
+<html lang="en">
+   <style>
+   .body {
+       width: 100%;
+         height: 100%;
+         background-color: #f2f2f2;
+         .body{
+            background-color: #f2f2f2;
+  
+     margin-left: auto;
+       margin-right:auto;
+       text-align:center;
+       width: 510px;
+       color:rgb(2, 0, 6);
+       border: solid black 2px;
+       background:rgb(248, 252, 249);
+       margin-bottom: 20px;
+  }
+  .button {
+         background-color: #f8f8f8; /* Green */
+         border: none;
+         color: white;
+         padding: 16px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         transition-duration: 0.4s;
+         cursor: pointer;
+         
+       }
+           .button1 {
+             background-color: #4CAF50; /* Green */
+                  color: white;      
+                  transition-duration: 0.4s;
+                  cursor: pointer;
+                  background-color: #070707; /* Green */
+                  border: none;
+                  color: white;
+                  padding: 20px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                  border-radius: 12px;
+                } 
+
+   </style>
+
+<body class="body" >
+   <button class="button button1" onclick="window.location.href='reg'">Reporting</button>
+     
+
+{% block content %}
+<select name="select" id="select" onchange="showUser(this.value)">
+{%for k in l %}
+
+<option value="{{k}}" >{{k}}</option>
+{% endfor %}
+</select>
+
+<select name="select" id="select" onchange="showUser(this.value)">
+{% for incomes in income%}
+  <option value="{{incomes}}">{{incomes}}</option>
+{% endfor %}
+</select>
+<select name="select" id="select" onchange="showUser(this.value)">
+
+
+ 
+{% for m in assets%}
+  <option value="{{m}}">{{m}}</option>
+{% endfor %}
+</select>
+<select name="select" id="select" onchange="showUser(this.value)">
+ n
+   {% for j in  yearsinbussiness%}
+     <option value="{{j}}">{{j}}</option>
+   {% endfor %}
+</select>
+
+
+{% endblock %}
+
+</body>
+</html>
